@@ -1,0 +1,84 @@
+{
+  "options": {
+    "paths": {
+      "root": "/data",
+      "fonts": "fonts",
+      "styles": "styles",
+      "mbtiles": "/data"
+    },
+    "serveStaticMaps": true,
+    "formatQuality": {
+      "jpeg": 90,
+      "webp": 90
+    },
+    "maxSize": 8192,
+    "pbfAlias": "pbf"
+  },
+  "styles": {
+    "osm-bright": {
+      "style": "/data/styles/osm_bright.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
+      }
+    },
+    "osm-liberty": {
+      "style": "/data/styles/osm_liberty.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
+      }
+    },
+    "osm-liberty-holding": {
+      "style": "/data/styles/osm_liberty_holding.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
+      }
+    },
+    "barkoi_green": {
+      "style": "/data/styles/barikoi_green.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
+      }
+    },
+    "barikoi-dark": {
+      "style": "/data/styles/barikoi-dark.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
+      }
+    },
+    "barikoi-gmaps-ripoff": {
+      "style": "/data/style/barikoi.json",
+      "tilejson": {
+        "bounds": [88.01, 20.38, 92.68, 26.64]
+      }
+    },
+    "OneMap": {
+      "style": "/data/styles/one_map.json",
+      "tilejson": {
+        "bounds": [88.01, 20.38, 92.68, 26.64]
+      }
+    }
+  },
+  "data": {
+    "base": {
+      "mbtiles": "./tiles/tiles.mbtiles"
+    },
+    "scrape_poi": {
+      "mbtiles": "./tiles/scrape_poi.mbtiles"
+    },
+    "admin": {
+      "mbtiles": "./tiles/admin.mbtiles"
+    },
+    "poi": {
+      "mbtiles": "./tiles/poi.mbtiles"
+    },
+    "roads": {
+      "mbtiles": "./tiles/roads_test.mbtiles"
+    },
+    "village": {
+      "mbtiles": "./tiles/village.mbtiles"
+    },
+    "sector_four_poi": {
+      "mbtiles": "./tiles/sector_four_poi.mbtiles"
+    }
+  }
+}

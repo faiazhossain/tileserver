@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  tileserver:
+    # image: maptiler/tileserver-gl
+    # image: rilusmahmud/tileserver-gl-api:2.1.0
+    image: rilusmahmud/tileserver-gl-api:4.4.11
+    container_name: ts-geo-api
+    user: root
+    ports:
+      - "2000:8080"
+    volumes:
+      - .:/data
+    # user: root
+    restart: always
+    environment:
+      - TZ=Asia/Dhaka
+      - AUTH_BASE_URL=https://geoserver.bmapsbd.com
+    command:
+      - '-l'
+      - 'output.log'
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+  varnish:
+    image: varnish
+    container_name: ts-geo-varnish
+    ports:
+      - "8080:80"
+    volumes:
+      - ./default.vcl:/etc/varnish/default.vcl
+    restart: always
+    environment:
+      - CACHE_TTL=1d
+      - VARNISH_SIZE=2G
