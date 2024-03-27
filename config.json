@@ -68,6 +68,12 @@
     "desco_poi": {
       "mbtiles": "./tiles/desco_poi.mbtiles"
     },
+    "ubl_poi": {
+      "mbtiles": "./tiles/ubl_outlets.mbtiles"
+    },
+    "srilanka_poi": {
+      "mbtiles": "./tiles/srilanka.mbtiles"
+    },
     "admin": {
       "mbtiles": "./tiles/admin.mbtiles"
     },
