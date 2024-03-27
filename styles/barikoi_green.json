@@ -14,6 +14,10 @@
       "type": "vector",
       "url": "mbtiles://{scrape_poi}"
     },
+    "desco_poi": {
+      "type": "vector",
+      "url": "mbtiles://{desco_poi}"
+    },
     "data": {
       "type": "vector",
       "url": "mbtiles://{poi}"
@@ -38,7 +42,9 @@
           5,
           "hsl(148, 63%, 83%)",
           8.1,
-          "hsl(0, 0%, 97%)"
+          "hsl(0, 0%, 97%)",
+          12,
+          "#F5F3F3"
         ]
       }
     },
@@ -189,9 +195,9 @@
           ["linear"],
           ["zoom"],
           11.3,
-          "hsl(260, 98%, 94%)",
+          "#F8F0DE",
           16.7,
-          "hsl(279, 66%, 96%)"
+          "#F8F0DE"
         ]
       },
       "filter": [
@@ -4923,7 +4929,7 @@
       "type": "symbol",
       "source": "scrape_poi",
       "source-layer": "scrape_poi",
-      "minzoom": 12,
+      "minzoom": 11,
       "layout": {
         "icon-size": [
           "interpolate",
@@ -4967,6 +4973,12 @@
           "step",
           ["zoom"],
           0,
+          11,
+          ["case", ["<=", ["get", "rank"], 5], 1, 0],
+          12,
+          ["case", ["<=", ["get", "rank"], 5], 1, 0],
+          13,
+          ["case", ["<=", ["get", "rank"], 5], 1, 0],
           14,
           ["case", ["<=", ["get", "rank"], 5], 1, 0],
           15,
@@ -5026,6 +5038,29 @@
           ["literal", [0, 10]]
         ]
       }
+    },
+    {
+      "id": "Desco address",
+      "type": "symbol",
+      "source": "desco_poi",
+      "source-layer": "desco_address",
+      "minzoom": 11,
+      "layout": {
+        "text-field": "{Address}",
+        "text-font": ["Noto Sans Regular"],
+        "text-size": 8,
+        "visibility": "visible",
+        "icon-image": "shoe",
+        "icon-anchor": "bottom",
+        "text-anchor": "top"
+      },
+      "paint": {
+        "icon-halo-color": "rgba(255, 255, 255, 1)",
+        "icon-halo-width": 1,
+        "text-color": "hsl(0, 0%, 25%)",
+        "icon-color": "hsl(0, 0%, 25%)"
+      },
+      "filter": ["==", ["geometry-type"], "Point"]
     },
     {
       "id": "Culture",

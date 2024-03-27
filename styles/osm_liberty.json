@@ -2049,14 +2049,7 @@
       "type": "fill",
       "source": "sector_four",
       "source-layer": "barikoi_poi",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Polygon"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Polygon"]],
       "minzoom": 13,
       "maxzoom": 22,
       "layout": {
@@ -2065,51 +2058,23 @@
       "paint": {
         "fill-color": [
           "case",
-          [
-            "==",
-            [
-              "get",
-              "zone"
-            ],
-            "LOW"
-          ],
+          ["==", ["get", "zone"], "LOW"],
           "#FDD5D4",
-          [
-            "==",
-            [
-              "get",
-              "zone"
-            ],
-            "MID"
-          ],
+          ["==", ["get", "zone"], "MID"],
           "#FB9E9B",
-          [
-            "==",
-            [
-              "get",
-              "zone"
-            ],
-            "HIGH"
-          ],
+          ["==", ["get", "zone"], "HIGH"],
           "#F95A51",
           "#CF2B1A"
         ],
         "fill-outline-color": {
           "base": 1,
           "stops": [
-            [
-              13,
-              "#E8EAED"
-            ],
-            [
-              14,
-              "#E8EAED"
-            ]
+            [13, "#E8EAED"],
+            [14, "#E8EAED"]
           ]
         }
       }
-    }
-,    
+    },
     {
       "id": "building-ada-symbol",
       "type": "symbol",
@@ -2123,7 +2088,7 @@
         "text-field": "{rank}",
         "text-font": ["Roboto Bold"],
         "text-size": 12,
-        "text-allow-overlap":false
+        "text-allow-overlap": false
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -3198,6 +3163,27 @@
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
       }
+    },
+    {
+      "id": "Crop",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "globallandcover",
+      "maxzoom": 8,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "hsl(305, 100%, 50%)",
+        "fill-opacity": {
+          "stops": [
+            [0, 1],
+            [8, 0.1]
+          ]
+        },
+        "fill-antialias": true
+      },
+      "filter": ["==", "class", "crop"]
     },
     {
       "id": "poi_transit",

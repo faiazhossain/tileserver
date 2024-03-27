@@ -65,6 +65,9 @@
     "scrape_poi": {
       "mbtiles": "./tiles/scrape_poi.mbtiles"
     },
+    "desco_poi": {
+      "mbtiles": "./tiles/desco_poi.mbtiles"
+    },
     "admin": {
       "mbtiles": "./tiles/admin.mbtiles"
     },
