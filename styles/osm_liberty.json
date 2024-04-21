@@ -9,11 +9,11 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "mbtiles://{base}"
+      "url": "https://tiles.bmapsbd.com/bangladesh,nepal,bhutan,pakistan,myanmar,sri-lanka,india"
     },
     "admin": {
       "type": "vector",
-      "url": "mbtiles://{admin}"
+      "url": "https://tiles.bmapsbd.com/admin"
     },
     "village": {
       "type": "vector",
@@ -21,7 +21,7 @@
     },
     "data": {
       "type": "vector",
-      "url": "https://geoserver.bmapsbd.com/data/poi.json?key=MjYyMzpHOVkzWFlGNjZG"
+      "url": "https://tiles.bmapsbd.com/poi"
     },
     "sector_four": {
       "type": "vector",
@@ -37,7 +37,7 @@
     }
   },
   "sprite": "{styleJsonFolder}/sprite",
-  "glyphs": "{fontstack}/{range}.pbf",
+  "glyphs": "https://tiles.bmapsbd.com/font/{fontstack}/{range}",
   "layers": [
     {
       "id": "background",

@@ -21,7 +21,7 @@
     }
   },
   "sprite": "{styleJsonFolder}/sprite",
-  "glyphs": "{fontstack}/{range}.pbf",
+  "glyphs": "https://tiles.bmapsbd.com/font/{fontstack}/{range}",
   "layers": [
     {
       "id": "background",

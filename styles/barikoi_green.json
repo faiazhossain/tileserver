@@ -3,12 +3,12 @@
   "name": "Barkoi_Green",
   "sources": {
     "openmaptiles": {
-      "url": "mbtiles://{base}",
+      "url": "https://tiles.bmapsbd.com/bangladesh,nepal",
       "type": "vector"
     },
     "admin": {
       "type": "vector",
-      "url": "mbtiles://{admin}"
+      "url": "https://tiles.bmapsbd.com/admin"
     },
     "scrape_poi": {
       "type": "vector",
@@ -21,7 +21,7 @@
     "ubl_poi": {
       "type": "vector",
       "url": "mbtiles://{ubl_poi}"
-    },    
+    },
     "ubl_master_poi": {
       "type": "vector",
       "url": "mbtiles://{ubl_master_poi}"
@@ -30,13 +30,13 @@
       "type": "vector",
       "url": "mbtiles://{srilanka_poi}"
     },
-    "data": {
-      "type": "vector",
-      "url": "mbtiles://{poi}"
-    },
     "sector_four": {
       "type": "vector",
       "url": "mbtiles://{sector_four_poi}"
+    },
+    "data": {
+      "type": "vector",
+      "url": "https://tiles.bmapsbd.com/poi"
     }
   },
   "layers": [
@@ -993,22 +993,6 @@
       },
       "metadata": {},
       "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "pier"]]
-    },
-    {
-      "id": "Bridge",
-      "type": "fill",
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "hsl(42,49%,93%)",
-        "fill-opacity": 0.6,
-        "fill-antialias": true
-      },
-      "metadata": {},
-      "filter": ["==", "brunnel", "bridge"]
     },
     {
       "id": "Minor road outline",
@@ -5270,7 +5254,7 @@
           ["literal", [0, 10]]
         ]
       }
-    }, 
+    },
     {
       "id": "Ubl master",
       "type": "symbol",
@@ -6696,7 +6680,7 @@
       "paint": {
         "text-color": "rgb(36,37,39)",
         "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-color": "#fff",
         "text-halo-width": 2
       }
     },
@@ -6746,7 +6730,7 @@
       }
     }
   ],
-  "glyphs": "{fontstack}/{range}.pbf",
+  "glyphs": "https://tiles.bmapsbd.com/font/{fontstack}/{range}",
   "sprite": "{styleJsonFolder}/new_icons/sprite",
   "bearing": 0,
   "pitch": 0,

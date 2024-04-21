@@ -1,0 +1,11 @@
+mbtiles:
+  paths:
+    - ./tiles
+sprites:
+  sources:
+    # all SVG files in this dir will be published as a "my_images" sprite source
+    my_sprites: ./styles/icons
+    maki_icons: ./styles/new_icons/icons
+fonts:
+  # A list of *.otf, *.ttf, and *.ttc font files and dirs to search recursively.
+  - ./fonts_downloaded

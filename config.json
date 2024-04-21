@@ -70,7 +70,7 @@
     },
     "ubl_poi": {
       "mbtiles": "./tiles/ubl_outlets.mbtiles"
-    },    
+    },
     "ubl_master_poi": {
       "mbtiles": "./tiles/ubl_master.mbtiles"
     },
