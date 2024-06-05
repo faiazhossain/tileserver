@@ -1,0 +1,53 @@
+scp -r ./build/* username@server_ip:/var/www/your_domain/html {
+      "id": "building-ada",
+      "type": "fill",
+      "source": "sector_four",
+      "source-layer": "barikoi_poi",
+      "filter": ["all", ["==", "$type", "Polygon"]],
+      "minzoom": 13,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": [
+          "case",
+          ["==", ["get", "zone"], "LOW"],
+          "#FF9B50",
+          ["==", ["get", "zone"], "MID"],
+          "#E25E3E",
+          ["==", ["get", "zone"], "HIGH"],
+          "#C63D2F",
+          "#6D2932"
+        ],
+        "fill-outline-color": {
+          "base": 1,
+          "stops": [
+            [13, "#E8EAED"],
+            [14, "#E8EAED"]
+          ]
+        }
+      }
+    },
+    {
+      "id": "building-ada-symbol",
+      "type": "symbol",
+      "source": "sector_four",
+      "source-layer": "barikoi_poi",
+      "filter": ["all", ["==", "$type", "Polygon"], [">=", "rank", 1]],
+      "minzoom": 13,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{rank}",
+        "text-font": ["Roboto Bold"],
+        "text-size": 12,
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-color": "#17202A"
+      }
+    },

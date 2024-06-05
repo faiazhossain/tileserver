@@ -3,18 +3,18 @@ services:
   tileserver:
     # image: maptiler/tileserver-gl
     # image: rilusmahmud/tileserver-gl-api:2.1.0
-    image: rilusmahmud/tileserver-gl-api:4.4.11
+    image: faiazhossain10/tileserver-gl:main
     container_name: ts-geo-api
     user: root
     ports:
-      - "2000:8080"
+      - "4005:8080"
     volumes:
       - .:/data
     # user: root
     restart: always
-    environment:
-      - TZ=Asia/Dhaka
-      - AUTH_BASE_URL=https://geoserver.bmapsbd.com
+    # environment:
+    #   - TZ=Asia/Dhaka
+    #   - AUTH_BASE_URL=https://geoserver.bmapsbd.com
     command:
       - '-l'
       - 'output.log'
