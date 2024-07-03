@@ -1,4 +1,6 @@
-scp -r ./build/* username@server_ip:/var/www/your_domain/html {
+scp -r barikoi_green.json barikoi@20.193.148.168:/mnt/tileserver/styles 
+
+    {
       "id": "building-ada",
       "type": "fill",
       "source": "sector_four",
