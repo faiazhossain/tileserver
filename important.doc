@@ -53,3 +53,44 @@ scp -r barikoi_green.json barikoi@20.193.148.168:/mnt/tileserver/styles
         "text-color": "#17202A"
       }
     },
+
+
+
+
+     "fill-color": [
+        "interpolate",
+        ["exponential", 1.4],
+        ["zoom"],
+        13,
+        [
+          "case",
+          ["has", "Education"],
+          [
+            "case",
+            ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
+            "#FF9B50",
+            ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
+            "#E25E3E",
+            ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
+            "#C63D2F",
+            "#4D2932"
+          ],
+          "rgba(109, 41, 50, .6)"
+        ],
+        22,
+        [
+          "case",
+          ["has", "Education"],
+          [
+            "case",
+            ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
+            "#FF9B50",
+            ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
+            "#E25E3E",
+            ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
+            "#C63D2F",
+            "#4D2932"
+          ],
+          "rgba(109, 41, 50, .1)"
+        ]
+      ],

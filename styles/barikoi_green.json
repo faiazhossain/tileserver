@@ -26,9 +26,9 @@
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/bd_poi"
     },
-    "polar_zone": {
+    "polar": {
       "type": "vector",
-      "url": "https://tiles.bmapsbd.com/polar_zone"
+      "url": "https://tiles.bmapsbd.com/polar"
     },
     "ubl_poi": {
       "type": "vector",
@@ -65,6 +65,10 @@
     "kenya_poi": {
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/kenya_poi"
+    },
+    "village_grid": {
+      "type": "vector",
+      "url": "https://tiles.bmapsbd.com/village_grid"
     }
   },
   "layers": [
@@ -3188,11 +3192,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -3323,11 +3327,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -3450,11 +3454,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -3591,11 +3595,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -3720,11 +3724,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -3878,11 +3882,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4029,11 +4033,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4157,11 +4161,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4286,11 +4290,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4409,11 +4413,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4536,11 +4540,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4693,11 +4697,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4820,11 +4824,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -4965,11 +4969,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -5086,11 +5090,11 @@
         "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
         "text-field": [
           "format",
-          ["get", "name_en"],
+          ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name_bijoy"],
+          ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]
@@ -6061,11 +6065,46 @@
       }
     },
     {
+      "id": "village_grid_fill",
+      "type": "line",
+      "source": "village_grid",
+      "filter": ["==", ["geometry-type"], "Polygon"],
+      "source-layer": "village_grid",
+      "minzoom": 15,
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "rgba(0, 0, 0, .1)",
+        "line-width": 1
+      },
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "village_grid",
+      "type": "symbol",
+      "source": "village_grid",
+      "source-layer": "village_grid",
+      "minzoom": 13,
+      "layout": {
+        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-field": "{grid_name}",
+        "text-max-width": 6,
+        "text-size": 14,
+        "visibility": "none"
+      },
+      "paint": {
+        "text-color": "#073b4c",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "ada-day-buildings",
       "type": "fill",
-      "source": "ada_day_buildings",
+      "source": "polar",
       "source-layer": "ada_day_buildings",
-      "minzoom": 10,
+      "minzoom": 6,
       "layout": {
         "visibility": "none"
       },
@@ -6090,7 +6129,7 @@
     {
       "id": "ada_day_buildings_symbol",
       "type": "symbol",
-      "source": "ada_day_buildings",
+      "source": "polar",
       "minzoom": 14,
       "source-layer": "ada_day_buildings",
       "layout": {
@@ -6109,9 +6148,9 @@
     {
       "id": "ada-night-buildings",
       "type": "fill",
-      "source": "ada_night_buildings",
+      "source": "polar",
       "source-layer": "ada_night_buildings",
-      "minzoom": 10,
+      "minzoom": 6,
       "layout": {
         "visibility": "none"
       },
@@ -6131,7 +6170,7 @@
     {
       "id": "ada_night_buildings_symbol",
       "type": "symbol",
-      "source": "ada_night_buildings",
+      "source": "polar",
       "minzoom": 14,
       "source-layer": "ada_night_buildings",
       "layout": {
@@ -6155,9 +6194,8 @@
     {
       "id": "ada day bounds",
       "type": "fill",
-      "source": "ada_day_bounds",
+      "source": "polar",
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "min-zoom": 14,
       "source-layer": "ada_day_bounds",
       "minzoom": 6,
       "maxzoom": 22,
@@ -6179,9 +6217,8 @@
     {
       "id": "ada night bounds",
       "type": "fill",
-      "source": "ada_night_bounds",
+      "source": "polar",
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "min-zoom": 14,
       "source-layer": "ada_night_bounds",
       "minzoom": 6,
       "maxzoom": 22,
@@ -7338,7 +7375,7 @@
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name:bn"],
+          ["get", "name_bn"],
           {
             "font-scale": 0.9,
             "text-font": ["literal", ["Kalpurush ANSI Regular"]]

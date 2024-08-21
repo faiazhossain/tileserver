@@ -6,6 +6,7 @@
       "styles": "styles",
       "mbtiles": "/data"
     },
+    "serveAllFonts": true,
     "serveStaticMaps": true,
     "formatQuality": {
       "jpeg": 90,
@@ -88,6 +89,9 @@
     },
     "village": {
       "mbtiles": "./tiles/village.mbtiles"
+    },
+    "polar_zone": {
+      "mbtiles": "./tiles/polar_zone.mbtiles"
     },
     "sector_four_poi": {
       "mbtiles": "./tiles/sector_four_poi.mbtiles"
