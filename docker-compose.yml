@@ -1,35 +1,45 @@
-version: '3.9'
+# version: '3.9'
+# services:
+#   tileserver:
+#     # image: maptiler/tileserver-gl
+#     # image: rilusmahmud/tileserver-gl-api:2.1.0
+#     image: faiazhossain10/tileserver-gl:main
+#     container_name: ts-geo-api
+#     user: root
+#     ports:
+#       - "4005:8080"
+#     volumes:
+#       - .:/data
+#     # user: root
+#     restart: always
+#     # environment:
+#     #   - TZ=Asia/Dhaka
+#     #   - AUTH_BASE_URL=https://geoserver.bmapsbd.com
+#     command:
+#       - '-l'
+#       - 'output.log'
+#     deploy:
+#       resources:
+#         limits:
+#           memory: 4G
+#   varnish:
+#     image: varnish
+#     container_name: ts-geo-varnish
+#     ports:
+#       - "8080:80"
+#     volumes:
+#       - ./default.vcl:/etc/varnish/default.vcl
+#     restart: always
+#     environment:
+#       - CACHE_TTL=1d
+#       - VARNISH_SIZE=2G
+
+---
 services:
-  tileserver:
-    # image: maptiler/tileserver-gl
-    # image: rilusmahmud/tileserver-gl-api:2.1.0
-    image: faiazhossain10/tileserver-gl:main
-    container_name: ts-geo-api
-    user: root
+  tileserver-gl:
+    image: maptiler/tileserver-gl
+    container_name: fz-ts
     ports:
-      - "4005:8080"
+      - 4006:8080
     volumes:
-      - .:/data
-    # user: root
-    restart: always
-    # environment:
-    #   - TZ=Asia/Dhaka
-    #   - AUTH_BASE_URL=https://geoserver.bmapsbd.com
-    command:
-      - '-l'
-      - 'output.log'
-    deploy:
-      resources:
-        limits:
-          memory: 4G
-  varnish:
-    image: varnish
-    container_name: ts-geo-varnish
-    ports:
-      - "8080:80"
-    volumes:
-      - ./default.vcl:/etc/varnish/default.vcl
-    restart: always
-    environment:
-      - CACHE_TTL=1d
-      - VARNISH_SIZE=2G
+      - ./:/data

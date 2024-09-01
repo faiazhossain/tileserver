@@ -1,4 +1,4 @@
-scp -r barikoi_green.json barikoi@20.193.148.168:/mnt/tileserver/styles 
+scp -r barikoi_green.json faiaz@34.171.34.28:/home/faiaz/projects/tileserver/styles 
 
     {
       "id": "building-ada",
