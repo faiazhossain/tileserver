@@ -26,6 +26,10 @@
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/bd_poi"
     },
+    "bd_buildings": {
+      "type": "vector",
+      "url": "https://tiles.bmapsbd.com/bd_buildings"
+    },
     "polar": {
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/polar"
@@ -1826,6 +1830,38 @@
       },
       "metadata": {},
       "filter": ["!has", "hide_3d"]
+    },
+    {
+      "id": "bd buildings",
+      "type": "fill",
+      "source": "bd_buildings",
+      "source-layer": "data.bd_buildings",
+      "minzoom": 12,
+      "maxzoom": 22,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          12,
+          "#ff6b6b",
+          15,
+          "#ff4a4a",
+          19,
+          "#e60000"
+        ],
+        "fill-outline-color": {
+          "base": 1,
+          "stops": [
+            [12, "hsla(0, 0%, 80%, 0.5)"],
+            [15, "hsl(0, 0%, 60%)"],
+            [19, "hsl(0, 0%, 50%)"]
+          ]
+        }
+      }
     },
     {
       "id": "building-metro",
@@ -3872,6 +3908,8 @@
           "college",
           "madrasha",
           "college",
+          "post_office",
+          "post_office",
           ["coalesce", ["image", ["get", "type"]], ["image", "school"]]
         ],
         "text-anchor": "top",

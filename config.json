@@ -28,6 +28,12 @@
         "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
       }
     },
+    "osm_barikoi_v2": {
+      "style": "/data/styles/osm_barikoi_v2.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
+      }
+    },
     "osm-liberty-holding": {
       "style": "/data/styles/osm_liberty_holding.json",
       "tilejson": {
@@ -56,6 +62,12 @@
       "style": "/data/styles/one_map.json",
       "tilejson": {
         "bounds": [88.01, 20.38, 92.68, 26.64]
+      }
+    },
+    "gh-route": {
+      "style": "/data/styles/gh-mvt-style.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
       }
     }
   },

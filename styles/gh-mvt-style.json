@@ -1,0 +1,86 @@
+{
+  "version": 8,
+  "name": "gh-mvt",
+  "sources": {
+    "gh-mvt-tiles": {
+      "type": "vector",
+      "tiles": [
+        "http://geoserver.bmapsbd.com:8989/mvt/{z}/{x}/{y}.mvt?details=max_speed&details=road_class"
+      ]
+    }
+  },
+  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgb(239,239,239)"
+      }
+    },
+    {
+      "id": "gh_roads_big",
+      "type": "line",
+      "source": "gh-mvt-tiles",
+      "source-layer": "roads",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-opacity": 0.6,
+        "line-color": "#dd504b",
+        "line-width": 2
+      }
+    },
+    {
+      "id": "gh_roads_small",
+      "type": "line",
+      "source": "gh-mvt-tiles",
+      "source-layer": "roads",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-opacity": 0.6,
+        "line-color": "#f7c913",
+        "line-width": 2
+      }
+    },
+    {
+      "id": "gh_junctions",
+      "type": "circle",
+      "source": "gh-mvt-tiles",
+      "source-layer": "junctions",
+      "paint": {
+        "circle-color": "rgba(60, 21, 230, 1)",
+        "circle-radius": 5
+      }
+    },
+    {
+      "id": "gh_junctions_labels",
+      "type": "symbol",
+      "source": "gh-mvt-tiles",
+      "source-layer": "junctions",
+      "layout": {
+        "text-field": "{nodeId}",
+        "text-font": ["Noto Sans Regular"],
+        "text-letter-spacing": 0.1,
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "base": 1.4,
+          "stops": [
+            [10, 8],
+            [20, 14]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000",
+        "text-halo-color": "hsl(0, 0%, 100%)",
+        "text-halo-width": 2
+      }
+    }
+  ]
+}
