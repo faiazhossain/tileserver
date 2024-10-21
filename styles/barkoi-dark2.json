@@ -9,15 +9,15 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "mbtiles://{base}"
+      "url": "https://tiles.bmapsbd.com/bangladesh,bhutan,malaysia,myanmar,nepal,pakistan,sri-lanka,denmark,kenya,india"
     },
     "admin": {
       "type": "vector",
-      "url": "mbtiles://{admin}"
+      "url": "https://tiles.bmapsbd.com/admin"
     },
     "village": {
       "type": "vector",
-      "url": "mbtiles://{village}"
+      "url": "https://tiles.bmapsbd.com/village"
     }
   },
   "sprite": "{styleJsonFolder}/sprite",

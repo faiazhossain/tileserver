@@ -34,6 +34,10 @@
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/polar"
     },
+    "polar_zone": {
+      "type": "vector",
+      "url": "https://tiles.bmapsbd.com/polar_zone"
+    },
     "ubl_poi": {
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/ubl_outlets"
@@ -4162,264 +4166,6 @@
     },
 
     {
-      "id": "cafe",
-      "type": "symbol",
-      "source": "data",
-      "source-layer": "barikoi_poi",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        ["==", "$type", "Point"],
-        ["!in", "type", "residential"],
-        ["in", "subtype", "tong"]
-      ],
-      "layout": {
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          0,
-          1,
-          22,
-          2
-        ],
-        "icon-image": [
-          "match",
-          ["get", "subtype"],
-          "cafe",
-          "Polar_Icon",
-          "juice_bar",
-          "Polar_Icon",
-          ["coalesce", ["image", ["get", "subtype"]], ["image", "cafe"]]
-        ],
-        "text-anchor": "top",
-        "text-max-width": 9,
-        "text-offset": [0, 0.2],
-        "text-size": 14,
-        "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
-        "text-field": [
-          "format",
-          ["get", "name:en"],
-          { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
-          "\n",
-          {},
-          ["get", "name:bijoy"],
-          {
-            "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
-          }
-        ],
-
-        "text-padding": 4,
-        "icon-padding": 8,
-        "text-optional": true,
-        "symbol-sort-key": ["to-number", ["get", "rank"]],
-        "text-justify": "auto",
-
-        "icon-anchor": "center",
-        "icon-text-fit": "none",
-        "text-ignore-placement": false,
-        "text-allow-overlap": false,
-        "icon-allow-overlap": false
-      },
-      "paint": {
-        "icon-color": "#C69774",
-        "text-color": "#C69774",
-        "icon-opacity": [
-          "step",
-          ["zoom"],
-          0,
-          14,
-          ["case", ["<=", ["get", "rank"], 5], 1, 0],
-          15,
-          ["case", ["<=", ["get", "rank"], 10], 1, 0],
-          16,
-          ["case", ["<=", ["get", "rank"], 30], 1, 0],
-          17,
-          1
-        ],
-        "text-opacity": [
-          "step",
-          ["zoom"],
-          0,
-          14,
-          ["case", ["<=", ["get", "rank"], 10], 1, 0],
-          15,
-          ["case", ["<=", ["get", "rank"], 20], 1, 0],
-          16,
-          ["case", ["<=", ["get", "rank"], 30], 1, 0],
-          17,
-          1
-        ],
-        "icon-halo-blur": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          1,
-          14,
-          0.8,
-          16,
-          0
-        ],
-        "text-halo-blur": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          1,
-          14,
-          0.5,
-          16,
-          0
-        ],
-        "icon-halo-color": "hsl(0, 0%, 100%)",
-        "icon-halo-width": 2,
-        "text-halo-color": "hsl(0, 0%, 100%)",
-        "text-halo-width": 2,
-        "icon-translate": [0, -8],
-        "text-translate": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          0,
-          ["literal", [0, 0]],
-          22,
-          ["literal", [0, 10]]
-        ]
-      }
-    },
-    {
-      "id": "polar",
-      "type": "symbol",
-      "source": "data",
-      "source-layer": "barikoi_poi",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        ["==", "$type", "Point"],
-        ["!in", "type", "residential"],
-        ["in", "subtype", "cafe", "juice_bar"]
-      ],
-      "layout": {
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          0,
-          0.15,
-          22,
-          0.3
-        ],
-        "icon-image": [
-          "match",
-          ["get", "subtype"],
-          "cafe",
-          "Polar_Icon",
-          "juice_bar",
-          "Polar_Icon",
-          ["coalesce", ["image", ["get", "subtype"]], ["image", "Polar_Icon"]]
-        ],
-        "text-anchor": "top",
-        "text-max-width": 9,
-        "text-offset": [0, 0.2],
-        "text-size": 14,
-        "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
-        "text-field": [
-          "format",
-          ["get", "name:en"],
-          { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
-          "\n",
-          {},
-          ["get", "name:bijoy"],
-          {
-            "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
-          }
-        ],
-
-        "text-padding": 4,
-        "icon-padding": 8,
-        "text-optional": true,
-        "symbol-sort-key": ["to-number", ["get", "rank"]],
-        "text-justify": "auto",
-
-        "icon-anchor": "center",
-        "icon-text-fit": "none",
-        "text-ignore-placement": false,
-        "text-allow-overlap": false,
-        "icon-allow-overlap": false
-      },
-      "paint": {
-        "icon-color": "#FF0000",
-        "text-color": "#FF0000",
-        "icon-opacity": [
-          "step",
-          ["zoom"],
-          0,
-          14,
-          ["case", ["<=", ["get", "rank"], 5], 1, 0],
-          15,
-          ["case", ["<=", ["get", "rank"], 10], 1, 0],
-          16,
-          ["case", ["<=", ["get", "rank"], 30], 1, 0],
-          17,
-          1
-        ],
-        "text-opacity": [
-          "step",
-          ["zoom"],
-          0,
-          14,
-          ["case", ["<=", ["get", "rank"], 10], 1, 0],
-          15,
-          ["case", ["<=", ["get", "rank"], 20], 1, 0],
-          16,
-          ["case", ["<=", ["get", "rank"], 30], 1, 0],
-          17,
-          1
-        ],
-        "icon-halo-blur": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          1,
-          14,
-          0.8,
-          16,
-          0
-        ],
-        "text-halo-blur": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          1,
-          14,
-          0.5,
-          16,
-          0
-        ],
-        "icon-halo-color": "hsl(0, 0%, 100%)",
-        "icon-halo-width": 2,
-        "text-halo-color": "hsl(0, 0%, 100%)",
-        "text-halo-width": 2,
-        "icon-translate": [0, -12],
-        "text-translate": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          0,
-          ["literal", [0, 0]],
-          22,
-          ["literal", [0, 10]]
-        ]
-      }
-    },
-    {
       "id": "religious",
       "type": "symbol",
       "source": "data",
@@ -6286,13 +6032,134 @@
       ]
     },
     {
+      "id": "polar-zone-12AM-6AM",
+      "type": "fill",
+      "source": "polar_zone",
+      "source-layer": "polar_zone",
+      "minzoom": 6,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": [
+          "case",
+          ["has", "geohash"],
+          "rgba(41, 50, 109, .08)",
+          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
+          "#8097ff",
+          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
+          "#002ae6",
+          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
+          "#001780",
+          "#000933"
+        ]
+      },
+      "filter": [
+        "all",
+        ["==", ["geometry-type"], "Polygon"],
+        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
+      ]
+    },
+    {
+      "id": "polar-zone-6AM-12PM",
+      "type": "fill",
+      "source": "polar_zone",
+      "source-layer": "polar_zone",
+      "minzoom": 6,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": [
+          "case",
+          ["has", "geohash"],
+          "rgba(109, 41, 50, .1)",
+          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
+          "#FF9B50",
+          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
+          "#E25E3E",
+          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
+          "#C63D2F",
+          "#4D2932"
+        ]
+      },
+      "filter": [
+        "all",
+        ["==", ["geometry-type"], "Polygon"],
+        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
+      ]
+    },
+    {
+      "id": "polar-zone-12PM-6PM",
+      "type": "fill",
+      "source": "polar_zone",
+      "source-layer": "polar_zone",
+      "minzoom": 6,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": [
+          "case",
+          ["has", "geohash"],
+          "rgba(89, 33, 40, .1)",
+          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
+          "#E68946",
+          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
+          "#C14F34",
+          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
+          "#A53229",
+          "#3D2227"
+        ]
+      },
+      "filter": [
+        "all",
+        ["==", ["geometry-type"], "Polygon"],
+        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
+      ]
+    },
+    {
+      "id": "polar-zone-6PM-12AM",
+      "type": "fill",
+      "source": "polar_zone",
+      "source-layer": "polar_zone",
+      "minzoom": 6,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": [
+          "case",
+          ["has", "geohash"],
+          "rgba(41, 50, 109, .1)",
+          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
+          "#99afff",
+          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
+          "#3352ff",
+          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
+          "#2432b3",
+          "#1a204d"
+        ]
+      },
+      "filter": [
+        "all",
+        ["==", ["geometry-type"], "Polygon"],
+        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
+      ]
+    },
+    {
       "id": "ada_day_buildings_symbol",
       "type": "symbol",
       "source": "polar",
       "minzoom": 14,
       "source-layer": "ada_day_buildings",
       "layout": {
-        "text-field": ["coalesce", ["get", "rank"], ["get", "rank"]],
+        "text-field": [
+          "case",
+          ["!=", ["get", "details"], "{}"],
+          ["get", "rank"],
+          ""
+        ],
         "text-font": ["Noto Sans Regular"],
         "visibility": "none",
         "text-size": 8,
@@ -6508,6 +6375,264 @@
         ["!=", "subclass", "artwork"],
         ["has", "name"]
       ]
+    },
+    {
+      "id": "cafe",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "barikoi_poi",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["!in", "type", "residential"],
+        ["in", "subtype", "tong"]
+      ],
+      "layout": {
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          0,
+          1,
+          22,
+          2
+        ],
+        "icon-image": [
+          "match",
+          ["get", "subtype"],
+          "cafe",
+          "Polar_Icon",
+          "juice_bar",
+          "Polar_Icon",
+          ["coalesce", ["image", ["get", "subtype"]], ["image", "cafe"]]
+        ],
+        "text-anchor": "top",
+        "text-max-width": 9,
+        "text-offset": [0, 0.2],
+        "text-size": 14,
+        "visibility": "visible",
+        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-field": [
+          "format",
+          ["get", "name:en"],
+          { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
+          "\n",
+          {},
+          ["get", "name:bijoy"],
+          {
+            "font-scale": 0.9,
+            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+          }
+        ],
+
+        "text-padding": 4,
+        "icon-padding": 8,
+        "text-optional": true,
+        "symbol-sort-key": ["to-number", ["get", "rank"]],
+        "text-justify": "auto",
+
+        "icon-anchor": "center",
+        "icon-text-fit": "none",
+        "text-ignore-placement": false,
+        "text-allow-overlap": false,
+        "icon-allow-overlap": false
+      },
+      "paint": {
+        "icon-color": "#C69774",
+        "text-color": "#C69774",
+        "icon-opacity": [
+          "step",
+          ["zoom"],
+          0,
+          14,
+          ["case", ["<=", ["get", "rank"], 5], 1, 0],
+          15,
+          ["case", ["<=", ["get", "rank"], 10], 1, 0],
+          16,
+          ["case", ["<=", ["get", "rank"], 30], 1, 0],
+          17,
+          1
+        ],
+        "text-opacity": [
+          "step",
+          ["zoom"],
+          0,
+          14,
+          ["case", ["<=", ["get", "rank"], 10], 1, 0],
+          15,
+          ["case", ["<=", ["get", "rank"], 20], 1, 0],
+          16,
+          ["case", ["<=", ["get", "rank"], 30], 1, 0],
+          17,
+          1
+        ],
+        "icon-halo-blur": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          1,
+          14,
+          0.8,
+          16,
+          0
+        ],
+        "text-halo-blur": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          1,
+          14,
+          0.5,
+          16,
+          0
+        ],
+        "icon-halo-color": "hsl(0, 0%, 100%)",
+        "icon-halo-width": 2,
+        "text-halo-color": "hsl(0, 0%, 100%)",
+        "text-halo-width": 2,
+        "icon-translate": [0, -8],
+        "text-translate": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          0,
+          ["literal", [0, 0]],
+          22,
+          ["literal", [0, 10]]
+        ]
+      }
+    },
+    {
+      "id": "polar",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "barikoi_poi",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["!in", "type", "residential"],
+        ["in", "subtype", "cafe", "juice_bar"]
+      ],
+      "layout": {
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          0,
+          0.15,
+          22,
+          0.3
+        ],
+        "icon-image": [
+          "match",
+          ["get", "subtype"],
+          "cafe",
+          "Polar_Icon",
+          "juice_bar",
+          "Polar_Icon",
+          ["coalesce", ["image", ["get", "subtype"]], ["image", "Polar_Icon"]]
+        ],
+        "text-anchor": "top",
+        "text-max-width": 9,
+        "text-offset": [0, 0.2],
+        "text-size": 14,
+        "visibility": "visible",
+        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-field": [
+          "format",
+          ["get", "name:en"],
+          { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
+          "\n",
+          {},
+          ["get", "name:bijoy"],
+          {
+            "font-scale": 0.9,
+            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+          }
+        ],
+
+        "text-padding": 4,
+        "icon-padding": 8,
+        "text-optional": true,
+        "symbol-sort-key": ["to-number", ["get", "rank"]],
+        "text-justify": "auto",
+
+        "icon-anchor": "center",
+        "icon-text-fit": "none",
+        "text-ignore-placement": false,
+        "text-allow-overlap": false,
+        "icon-allow-overlap": false
+      },
+      "paint": {
+        "icon-color": "#FF0000",
+        "text-color": "#FF0000",
+        "icon-opacity": [
+          "step",
+          ["zoom"],
+          0,
+          14,
+          ["case", ["<=", ["get", "rank"], 5], 1, 0],
+          15,
+          ["case", ["<=", ["get", "rank"], 10], 1, 0],
+          16,
+          ["case", ["<=", ["get", "rank"], 30], 1, 0],
+          17,
+          1
+        ],
+        "text-opacity": [
+          "step",
+          ["zoom"],
+          0,
+          14,
+          ["case", ["<=", ["get", "rank"], 10], 1, 0],
+          15,
+          ["case", ["<=", ["get", "rank"], 20], 1, 0],
+          16,
+          ["case", ["<=", ["get", "rank"], 30], 1, 0],
+          17,
+          1
+        ],
+        "icon-halo-blur": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          1,
+          14,
+          0.8,
+          16,
+          0
+        ],
+        "text-halo-blur": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          1,
+          14,
+          0.5,
+          16,
+          0
+        ],
+        "icon-halo-color": "hsl(0, 0%, 100%)",
+        "icon-halo-width": 2,
+        "text-halo-color": "hsl(0, 0%, 100%)",
+        "text-halo-width": 2,
+        "icon-translate": [0, -12],
+        "text-translate": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          0,
+          ["literal", [0, 0]],
+          22,
+          ["literal", [0, 10]]
+        ]
+      }
     },
     {
       "id": "Food",
@@ -7792,7 +7917,7 @@
     }
   ],
   "glyphs": "https://tiles.bmapsbd.com/font/{fontstack}/{range}",
-  "sprite": "{styleJsonFolder}/new_icons/sprite",
+  "sprite": "https://tiles.bmapsbd.com/sprite/maki-icons",
   "bearing": 0,
   "pitch": 0,
   "center": [90.3785468, 23.7624137],

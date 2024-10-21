@@ -20,7 +20,7 @@
     },
     "village": {
       "type": "vector",
-      "url": "mbtiles://{village}"
+      "url": "https://tiles.bmapsbd.com/village"
     },
     "data": {
       "type": "vector",

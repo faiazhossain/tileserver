@@ -46,12 +46,7 @@
         "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
       }
     },
-    "barikoi-dark": {
-      "style": "/data/styles/barikoi-dark.json",
-      "tilejson": {
-        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
-      }
-    },
+
     "barikoi-gmaps-ripoff": {
       "style": "/data/style/barikoi.json",
       "tilejson": {
@@ -72,9 +67,6 @@
     }
   },
   "data": {
-    "base": {
-      "mbtiles": "./tiles/tiles.mbtiles"
-    },
     "scrape_poi": {
       "mbtiles": "./tiles/scrape_poi.mbtiles"
     },
@@ -89,18 +81,6 @@
     },
     "srilanka_poi": {
       "mbtiles": "./tiles/srilanka.mbtiles"
-    },
-    "admin": {
-      "mbtiles": "./tiles/admin.mbtiles"
-    },
-    "poi": {
-      "mbtiles": "./tiles/poi.mbtiles"
-    },
-    "roads": {
-      "mbtiles": "./tiles/roads_test.mbtiles"
-    },
-    "village": {
-      "mbtiles": "./tiles/village.mbtiles"
     },
     "polar_zone": {
       "mbtiles": "./tiles/polar_zone.mbtiles"

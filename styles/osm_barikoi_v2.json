@@ -17,7 +17,7 @@
     },
     "village": {
       "type": "vector",
-      "url": "mbtiles://{village}"
+      "url": "https://tiles.bmapsbd.com/village"
     },
     "ada_poi": {
       "type": "vector",

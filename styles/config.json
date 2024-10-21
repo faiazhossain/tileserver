@@ -40,7 +40,7 @@
       }
     },
     "barikoi-dark": {
-      "style": "/data/styles/barikoi-dark.json",
+      "style": "/data/styles/barikoi-dark2.json",
       "tilejson": {
         "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
       }
