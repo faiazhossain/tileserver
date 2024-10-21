@@ -6032,42 +6032,13 @@
       ]
     },
     {
-      "id": "polar-zone-12AM-6AM",
+      "id": "polar-zone",
       "type": "fill",
       "source": "polar_zone",
       "source-layer": "polar_zone",
       "minzoom": 6,
       "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-color": [
-          "case",
-          ["has", "geohash"],
-          "rgba(41, 50, 109, .08)",
-          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
-          "#8097ff",
-          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
-          "#002ae6",
-          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
-          "#001780",
-          "#000933"
-        ]
-      },
-      "filter": [
-        "all",
-        ["==", ["geometry-type"], "Polygon"],
-        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
-      ]
-    },
-    {
-      "id": "polar-zone-6AM-12PM",
-      "type": "fill",
-      "source": "polar_zone",
-      "source-layer": "polar_zone",
-      "minzoom": 6,
-      "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "fill-color": [
@@ -6089,64 +6060,7 @@
         ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
       ]
     },
-    {
-      "id": "polar-zone-12PM-6PM",
-      "type": "fill",
-      "source": "polar_zone",
-      "source-layer": "polar_zone",
-      "minzoom": 6,
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-color": [
-          "case",
-          ["has", "geohash"],
-          "rgba(89, 33, 40, .1)",
-          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
-          "#E68946",
-          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
-          "#C14F34",
-          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
-          "#A53229",
-          "#3D2227"
-        ]
-      },
-      "filter": [
-        "all",
-        ["==", ["geometry-type"], "Polygon"],
-        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
-      ]
-    },
-    {
-      "id": "polar-zone-6PM-12AM",
-      "type": "fill",
-      "source": "polar_zone",
-      "source-layer": "polar_zone",
-      "minzoom": 6,
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-color": [
-          "case",
-          ["has", "geohash"],
-          "rgba(41, 50, 109, .1)",
-          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
-          "#99afff",
-          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
-          "#3352ff",
-          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
-          "#2432b3",
-          "#1a204d"
-        ]
-      },
-      "filter": [
-        "all",
-        ["==", ["geometry-type"], "Polygon"],
-        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
-      ]
-    },
+
     {
       "id": "ada_day_buildings_symbol",
       "type": "symbol",
