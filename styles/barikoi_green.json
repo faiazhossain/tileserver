@@ -3,7 +3,7 @@
   "name": "Barkoi_Green",
   "sources": {
     "openmaptiles": {
-      "url": "https://tiles.bmapsbd.com/bangladesh,bhutan,malaysia,myanmar,nepal,pakistan,sri-lanka,denmark,kenya,india",
+      "url": "https://planet.tiles.barikoimaps.dev/planet",
       "type": "vector"
     },
     "admin": {
@@ -6038,7 +6038,7 @@
       "source-layer": "polar_zone",
       "minzoom": 6,
       "layout": {
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "fill-color": [
@@ -6062,15 +6062,27 @@
     },
 
     {
-      "id": "ada_day_buildings_symbol",
+      "id": "polar_buildings_symbol",
       "type": "symbol",
-      "source": "polar",
+      "source": "polar_zone",
       "minzoom": 14,
-      "source-layer": "ada_day_buildings",
+      "source-layer": "polar_zone",
       "layout": {
         "text-field": [
           "case",
-          ["!=", ["get", "details"], "{}"],
+          ["!=", ["get", "Bank"], 0],
+          ["get", "rank"],
+          ["!=", ["get", "Food"], 0],
+          ["get", "rank"],
+          ["!=", ["get", "Shop"], 0],
+          ["get", "rank"],
+          ["!=", ["get", "Office"], 0],
+          ["get", "rank"],
+          ["!=", ["get", "Education"], 0],
+          ["get", "rank"],
+          ["!=", ["get", "Healthcare"], 0],
+          ["get", "rank"],
+          ["!=", ["get", "Religious Place"], 0],
           ["get", "rank"],
           ""
         ],

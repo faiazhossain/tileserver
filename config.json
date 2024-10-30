@@ -34,6 +34,12 @@
         "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
       }
     },
+    "planet-barikoi": {
+      "style": "/data/styles/planet_barikoi_v2.json",
+      "tilejson": {
+        "bounds": [90.099993, 23.587797, 90.698747, 23.939716]
+      }
+    },
     "osm-liberty-holding": {
       "style": "/data/styles/osm_liberty_holding.json",
       "tilejson": {
