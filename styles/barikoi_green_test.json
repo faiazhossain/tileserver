@@ -36,7 +36,7 @@
     },
     "polar_zone": {
       "type": "vector",
-      "url": "https://tiles.bmapsbd.com/polar_zone"
+      "url": "https://tiles.bmapsbd.com/polar_zone_v2"
     },
     "ubl_poi": {
       "type": "vector",
@@ -49,22 +49,6 @@
     "srilanka_poi": {
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/srilanka_poi"
-    },
-    "ada_day_buildings": {
-      "type": "vector",
-      "url": "https://tiles.bmapsbd.com/ada_day_buildings"
-    },
-    "ada_day_bounds": {
-      "type": "vector",
-      "url": "https://tiles.bmapsbd.com/ada_day_bounds"
-    },
-    "ada_night_bounds": {
-      "type": "vector",
-      "url": "https://tiles.bmapsbd.com/ada_night_bounds"
-    },
-    "ada_night_buildings": {
-      "type": "vector",
-      "url": "https://tiles.bmapsbd.com/ada_night_buildings"
     },
     "data": {
       "type": "vector",
@@ -3229,17 +3213,17 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Noto Sans Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name:bijoy"],
+          ["get", "name:nonlatin"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Noto Sans Regular"]]
           }
         ],
 
@@ -6005,40 +5989,13 @@
       }
     },
     {
-      "id": "ada-day-buildings",
-      "type": "fill",
-      "source": "polar",
-      "source-layer": "ada_day_buildings",
-      "minzoom": 6,
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-color": [
-          "case",
-          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
-          "#FF9B50",
-          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
-          "#E25E3E",
-          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
-          "#C63D2F",
-          "#4D2932"
-        ]
-      },
-      "filter": [
-        "all",
-        ["==", ["geometry-type"], "Polygon"],
-        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
-      ]
-    },
-    {
       "id": "polar-zone",
       "type": "fill",
       "source": "polar_zone",
       "source-layer": "polar_zone",
       "minzoom": 6,
       "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "fill-color": [
@@ -6078,6 +6035,10 @@
           ["get", "rank"],
           ["!=", ["get", "Office"], 0],
           ["get", "rank"],
+          ["!=", ["get", "Industry"], 0],
+          ["get", "rank"],
+          ["!=", ["get", "Transportation"], 0],
+          ["get", "rank"],
           ["!=", ["get", "Education"], 0],
           ["get", "rank"],
           ["!=", ["get", "Healthcare"], 0],
@@ -6087,7 +6048,7 @@
           ""
         ],
         "text-font": ["Noto Sans Regular"],
-        "visibility": "none",
+        "visibility": "visible",
         "text-size": 8,
         "text-allow-overlap": false
       },
@@ -6095,98 +6056,6 @@
         "text-color": "#000",
         "text-halo-blur": 1,
         "text-halo-color": "#fff"
-      }
-    },
-    {
-      "id": "ada-night-buildings",
-      "type": "fill",
-      "source": "polar",
-      "source-layer": "ada_night_buildings",
-      "minzoom": 6,
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-color": [
-          "case",
-          ["all", [">=", ["get", "rank"], 1], ["<=", ["get", "rank"], 4]],
-          "#8097ff",
-          ["all", [">=", ["get", "rank"], 5], ["<=", ["get", "rank"], 10]],
-          "#002ae6",
-          ["all", [">", ["get", "rank"], 10], ["<=", ["get", "rank"], 20]],
-          "#001780",
-          "#000933"
-        ]
-      }
-    },
-    {
-      "id": "ada_night_buildings_symbol",
-      "type": "symbol",
-      "source": "polar",
-      "minzoom": 14,
-      "source-layer": "ada_night_buildings",
-      "layout": {
-        "text-field": ["coalesce", ["get", "rank"], ["get", "rank"]],
-        "text-font": ["Noto Sans Regular"],
-        "visibility": "none",
-        "text-size": 8,
-        "text-allow-overlap": false
-      },
-      "paint": {
-        "text-color": "#000",
-        "text-halo-blur": 1,
-        "text-halo-color": "#fff"
-      },
-      "filter": [
-        "all",
-        ["==", ["geometry-type"], "Polygon"],
-        ["any", ["!", ["has", "rank"]], ["all", [">=", ["get", "rank"], 1]]]
-      ]
-    },
-    {
-      "id": "ada day bounds",
-      "type": "fill",
-      "source": "polar",
-      "filter": ["==", ["geometry-type"], "Polygon"],
-      "source-layer": "ada_day_bounds",
-      "minzoom": 6,
-      "maxzoom": 22,
-      "paint": {
-        "fill-color": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          0,
-          "rgb(109, 41, 50)",
-          11.2,
-          "rgba(109, 41, 50, .1)"
-        ]
-      },
-      "layout": {
-        "visibility": "none"
-      }
-    },
-    {
-      "id": "ada night bounds",
-      "type": "fill",
-      "source": "polar",
-      "filter": ["==", ["geometry-type"], "Polygon"],
-      "source-layer": "ada_night_bounds",
-      "minzoom": 6,
-      "maxzoom": 22,
-      "paint": {
-        "fill-color": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          0,
-          "rgba(41, 50, 109, .85)",
-          11.2,
-          "rgba(41, 50, 109, .1)"
-        ]
-      },
-      "layout": {
-        "visibility": "none"
       }
     },
     {
@@ -6941,17 +6810,17 @@
             [9, 0]
           ]
         },
-        "text-font": ["Roboto Regular", "Roboto Regular"],
+        "text-font": ["Roboto Regular", "Noto Sans Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name:bn"],
+          ["get", "name:nonlatin"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Roboto Regular"]]
+            "text-font": ["literal", ["Noto Sans Regular"]]
           }
         ],
 
@@ -7354,17 +7223,17 @@
           22,
           0.7
         ],
-        "text-font": ["Roboto Regular", "Noto Sans Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name_en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name:nonlatin"],
+          ["get", "name_bn"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Noto Sans Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
         "text-size": [
@@ -7540,17 +7409,17 @@
         "text-offset": [0, 0.2],
         "text-size": 13,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Roboto Regular"],
+        "text-font": ["Roboto Regular", "Noto Sans Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name:bn"],
+          ["get", "name:nonlatin"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Roboto Regular"]]
+            "text-font": ["literal", ["Noto Sans Regular"]]
           }
         ],
         "text-padding": 4,
@@ -7631,17 +7500,17 @@
           ]
         },
         "text-anchor": "bottom",
-        "text-font": ["Roboto Regular", "Roboto Regular"],
+        "text-font": ["Roboto Regular", "Noto Sans Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
           { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
           "\n",
           {},
-          ["get", "name:bn"],
+          ["get", "name:nonlatin"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Roboto Regular"]]
+            "text-font": ["literal", ["Noto Sans Regular"]]
           }
         ],
         "text-max-width": 8,
