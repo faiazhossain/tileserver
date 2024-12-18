@@ -9,7 +9,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://planet.tiles.barikoimaps.dev/planet"
+      "url": "https://tiles.bmapsbd.com/bangladesh"
     },
     "admin": {
       "type": "vector",
@@ -18,6 +18,10 @@
     "village": {
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/village"
+    },
+    "brac_sme": {
+      "type": "vector",
+      "url": "https://tiles.bmapsbd.com/brac_sme"
     },
     "data": {
       "type": "vector",
@@ -1909,6 +1913,124 @@
             [14, "#52BE80"]
           ]
         }
+      }
+    },
+    {
+      "id": "brac_sme",
+      "type": "symbol",
+      "source": "brac_sme",
+      "source-layer": "brac_sme",
+      "minzoom": 6,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["!in", "subtype", "cafe", "tong", "juice_bar"]
+      ],
+      "layout": {
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          6,
+          1,
+          14,
+          2
+        ],
+        "icon-image": ["match", ["get", "subtype"], "bkash", "bkash", "bkash"],
+        "text-anchor": "top",
+        "text-max-width": 9,
+        "text-offset": [0, 0.2],
+        "text-size": 14,
+        "visibility": "visible",
+        "text-font": ["Roboto Regular", "Roboto Regular"],
+        "text-field": [
+          "format",
+          ["get", "Name of Unit Office"],
+          { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
+          "\n",
+          {},
+          ["get", "Given Address (By BRAC Bank HQ)"],
+          {
+            "font-scale": 0.9,
+            "text-font": ["literal", ["Roboto Regular"]]
+          }
+        ],
+        "text-padding": 4,
+        "icon-padding": 8,
+        "text-optional": true,
+        "symbol-sort-key": ["to-number", ["get", "sl."]],
+        "text-justify": "auto",
+        "icon-anchor": "center",
+        "icon-text-fit": "none",
+        "text-ignore-placement": false,
+        "text-allow-overlap": false,
+        "icon-allow-overlap": false
+      },
+      "paint": {
+        "icon-color": "#5491F5",
+        "text-color": "#5491F5",
+        "icon-opacity": [
+          "step",
+          ["zoom"],
+          0,
+          6,
+          ["case", ["<=", ["get", "sl."], 5], 1, 0],
+          10,
+          ["case", ["<=", ["get", "sl."], 10], 1, 0],
+          12,
+          ["case", ["<=", ["get", "sl."], 30], 1, 0],
+          14,
+          1
+        ],
+        "text-opacity": [
+          "step",
+          ["zoom"],
+          0,
+          6,
+          ["case", ["<=", ["get", "sl."], 10], 1, 0],
+          10,
+          ["case", ["<=", ["get", "sl."], 20], 1, 0],
+          12,
+          ["case", ["<=", ["get", "sl."], 30], 1, 0],
+          14,
+          1
+        ],
+        "icon-halo-blur": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          1,
+          10,
+          0.8,
+          12,
+          0
+        ],
+        "text-halo-blur": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          1,
+          10,
+          0.5,
+          12,
+          0
+        ],
+        "icon-halo-color": "hsl(0, 0%, 100%)",
+        "icon-halo-width": 2,
+        "text-halo-color": "hsl(0, 0%, 100%)",
+        "text-halo-width": 2,
+        "icon-translate": [0, -8],
+        "text-translate": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          6,
+          ["literal", [0, 0]],
+          14,
+          ["literal", [0, 10]]
+        ]
       }
     },
     {
