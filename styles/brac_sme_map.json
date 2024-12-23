@@ -7480,91 +7480,43 @@
         "text-halo-width": 2
       }
     },
+
     {
-      "id": "brac_sme",
+      "id": "Brac sme",
       "type": "symbol",
       "source": "brac_sme",
-      "source-layer": "brac_sme",
-      "minzoom": 6,
       "layout": {
-        "text-max-width": 9,
-        "text-offset": [0, 0.2],
-        "visibility": "visible",
-        "text-font": ["Noto Sans Regular"],
-        "text-padding": 4,
-        "icon-padding": 9,
-        "text-optional": true,
-        "symbol-sort-key": ["to-number", ["get", "sl."]],
-        "icon-text-fit": "none",
-        "text-ignore-placement": false,
-        "text-allow-overlap": false,
-        "icon-allow-overlap": false,
-        "icon-overlap": "always",
-        "text-overlap": "always",
-        "icon-image": "brac_logo",
-        "icon-anchor": "center",
-        "icon-size": 1,
         "text-field": "{Name of Unit Office}",
+        "text-font": ["Roboto Regular", "Noto Sans Regular"],
+        "visibility": "visible",
+        "icon-image": "brac_logo",
+        "icon-anchor": "bottom",
         "text-anchor": "top",
-        "text-size": 16,
-        "text-letter-spacing": 0.2,
+        "text-letter-spacing": 0.15,
         "text-line-height": 1.2,
         "text-transform": "uppercase",
-        "symbol-avoid-edges": true,
-        "symbol-z-order": "viewport-y"
+        "text-size": ["interpolate", ["linear"], ["zoom"], 0, 4, 22, 22],
+        "symbol-avoid-edges": false,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 0, 0.2, 22, 2],
+        "icon-overlap": "cooperative",
+        "text-overlap": "never"
       },
       "paint": {
-        "icon-opacity": [
-          "step",
-          ["zoom"],
-          0,
-          6,
-          ["case", ["<=", ["get", "sl."], 5], 1, 0],
-          10,
-          ["case", ["<=", ["get", "sl."], 10], 1, 0],
-          12,
-          ["case", ["<=", ["get", "sl."], 30], 1, 0],
-          14,
-          1
-        ],
-        "text-opacity": [
-          "step",
-          ["zoom"],
-          0,
-          6,
-          ["case", ["<=", ["get", "sl."], 10], 1, 0],
-          10,
-          ["case", ["<=", ["get", "sl."], 20], 1, 0],
-          12,
-          ["case", ["<=", ["get", "sl."], 30], 1, 0],
-          14,
-          1
-        ],
-        "icon-translate": [0, -4],
-        "text-translate": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          6,
-          ["literal", [0, 0]],
-          14,
-          ["literal", [0, 10]]
-        ],
-        "text-translate-anchor": "map",
-        "text-color": "hsl(225, 73%, 38%)",
         "icon-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-color": "hsl(58, 100%, 90%)",
         "icon-halo-width": 1,
-        "text-halo-width": 1,
-        "text-halo-blur": 0,
-        "icon-translate-anchor": "map"
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1
       },
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["!in", "subtype", "cafe", "tong", "juice_bar"]
+        [
+          "any",
+          ["!", ["has", "sl."]],
+          ["all", [">=", ["get", "sl."], 1], ["<=", ["get", "sl."], 446]]
+        ],
+        ["==", ["geometry-type"], "Point"]
       ],
-      "maxzoom": 22
+      "source-layer": "brac_sme"
     },
     {
       "id": "continent",

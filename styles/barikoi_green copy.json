@@ -3233,7 +3233,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -3243,7 +3243,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -3368,7 +3368,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -3378,7 +3378,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
         "text-padding": 4,
@@ -3495,7 +3495,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -3505,7 +3505,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -3636,7 +3636,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -3646,7 +3646,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -3765,7 +3765,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -3775,7 +3775,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -3925,7 +3925,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -3935,7 +3935,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
         "text-padding": 4,
@@ -4076,7 +4076,7 @@
         "text-offset": [0, 0.5],
         "text-size": 12,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -4086,7 +4086,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
         "text-padding": 4,
@@ -4199,7 +4199,7 @@
           ["coalesce", ["image", ["get", "type"]], ["image", "religious_place"]]
         ],
         "text-anchor": "top",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -4209,7 +4209,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
         "text-max-width": 9,
@@ -4326,7 +4326,7 @@
           ["coalesce", ["image", ["get", "type"]], ["image", "bank"]]
         ],
         "text-anchor": "top",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -4336,7 +4336,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
         "text-max-width": 9,
@@ -4483,7 +4483,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -4493,7 +4493,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -4610,7 +4610,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -4620,7 +4620,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -4755,7 +4755,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -4765,7 +4765,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -4876,7 +4876,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -4886,7 +4886,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -5005,7 +5005,7 @@
         "text-offset": [0, 0.5],
         "text-size": 12,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -5015,7 +5015,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
         "text-padding": 4,
@@ -5428,7 +5428,7 @@
       "type": "symbol",
       "source": "barikoi_retail",
       "source-layer": "barikoi_retail",
-      "minzoom": 12,
+      "minzoom": 6,
       "layout": {
         "icon-size": [
           "interpolate",
@@ -5439,29 +5439,30 @@
           22,
           2
         ],
-        "icon-image": "observation-tower",
+        "icon-image": "danger",
         "text-anchor": "top",
         "text-font": ["Roboto Italic"],
         "text-max-width": 9,
         "text-offset": [0, 0.2],
         "text-size": 14,
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
+
         "text-padding": 2,
         "icon-padding": 2,
         "text-optional": true,
         "symbol-sort-key": ["to-number", ["get", "rank"]],
         "text-justify": "auto",
+
         "icon-anchor": "center",
         "icon-text-fit": "none",
         "text-ignore-placement": false,
-
-        "icon-allow-overlap": ["step", ["zoom"], false, 18, true, 20, true],
-        "text-allow-overlap": ["step", ["zoom"], false, 20, true]
+        "text-allow-overlap": false,
+        "icon-allow-overlap": true
       },
       "paint": {
         "icon-color": "#af143C",
-        "text-color": "hsl(244, 41%, 30%)",
+        "text-color": "#af143C",
         "icon-opacity": [
           "step",
           ["zoom"],
@@ -5520,17 +5521,16 @@
         "icon-halo-width": 2,
         "text-halo-color": "#ffffff",
         "text-halo-width": 1,
+        "icon-translate": [0, -8],
         "text-translate": [
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
           0,
-          ["literal", [0, 6]],
+          ["literal", [0, 0]],
           22,
-          ["literal", [0, 21]]
-        ],
-        "text-translate-anchor": "viewport",
-        "icon-translate": [7, -6]
+          ["literal", [0, 10]]
+        ]
       }
     },
     {
@@ -6452,7 +6452,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -6462,7 +6462,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
@@ -6581,7 +6581,7 @@
         "text-offset": [0, 0.2],
         "text-size": 14,
         "visibility": "visible",
-        "text-font": ["Roboto Regular", "Kalpurush ANSI Regular"],
+        "text-font": ["Roboto Regular", "Roboto Regular"],
         "text-field": [
           "format",
           ["get", "name:en"],
@@ -6591,7 +6591,7 @@
           ["get", "name:bijoy"],
           {
             "font-scale": 0.9,
-            "text-font": ["literal", ["Kalpurush ANSI Regular"]]
+            "text-font": ["literal", ["Roboto Regular"]]
           }
         ],
 
