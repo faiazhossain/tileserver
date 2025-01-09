@@ -26,6 +26,10 @@
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/barikoi_retail"
     },
+    "barikoi_admin": {
+      "type": "vector",
+      "url": "https://tiles.bmapsbd.com/barikoi_admin"
+    },
     "bd_poi": {
       "type": "vector",
       "url": "https://tiles.bmapsbd.com/bd_poi"
@@ -7716,6 +7720,41 @@
       },
       "paint": {
         "text-color": "#687787",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "place_village_barikoi_admin",
+      "type": "symbol",
+      "source": "barikoi_admin",
+      "source-layer": "place",
+      "filter": ["all", ["==", "class", "village"]],
+      "layout": {
+        "text-font": ["Roboto Regular", "Noto Sans Regular"],
+        "text-field": [
+          "format",
+          ["get", "name:en"],
+          { "font-scale": 1.0, "text-font": ["literal", ["Roboto Regular"]] },
+          "\n",
+          {},
+          ["get", "name:nonlatin"],
+          {
+            "font-scale": 0.9,
+            "text-font": ["literal", ["Noto Sans Regular"]]
+          }
+        ],
+        "text-max-width": 8,
+        "text-size": {
+          "base": 1.2,
+          "stops": [
+            [10, 12],
+            [15, 22]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#f0f",
         "text-halo-color": "rgba(255,255,255,0.8)",
         "text-halo-width": 1.2
       }
